@@ -1,0 +1,139 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #050505;
+  color: #f5f5f5;
+  font-family: Inter, Arial, sans-serif;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+.page-shell {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.page-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.hotspot {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.hotspot:focus-visible,
+.menu-link:focus-visible {
+  outline: 2px solid #d68b6f;
+  outline-offset: 2px;
+}
+
+.menu-panel {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+.menu-link {
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: #141414;
+  padding: 14px 16px;
+  color: #f4f4f4;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.menu-link.active {
+  background: #d68b6f;
+  border-color: #d68b6f;
+  color: #111111;
+}
+
+.hotspot-logo {
+  top: 0.1%;
+  left: 1.3%;
+  width: 10%;
+  height: 0.6%;
+}
+
+.hotspot-home {
+  top: 0.15%;
+  left: 54.8%;
+  width: 3.7%;
+  height: 0.5%;
+}
+
+.hotspot-services {
+  top: 0.15%;
+  left: 60.0%;
+  width: 4.9%;
+  height: 0.5%;
+}
+
+.hotspot-projects {
+  top: 0.15%;
+  left: 65.4%;
+  width: 4.8%;
+  height: 0.5%;
+}
+
+.hotspot-about {
+  top: 0.15%;
+  left: 73.8%;
+  width: 4.8%;
+  height: 0.5%;
+}
+
+.hotspot-contact {
+  top: 0.15%;
+  left: 78.1%;
+  width: 5.8%;
+  height: 0.5%;;
+}
+
+.hotspot-careers {
+  top: 0.15%;
+  left: 85.3%;
+  width: 5.9%;
+  height: 0.5%;
+}
+
+.hotspot-blogs {
+  top: 0.15%;
+  left: 90.7%;
+  width: 4.1%;
+  height: 0.5%;
+}
+
+.hotspot-mobile-logo {
+  top: 1.15%;
+  left: 2.2%;
+  width: 18%;
+  height: 4.7%;
+}
+
+.hotspot-mobile-menu {
+  top: 1.15%;
+  right: 2.4%;
+  width: 16%;
+  height: 4.7%;
+}
+
+@media (max-width: 767px) {
+  .page-shell {
+    max-width: 420px;
+  }
+}

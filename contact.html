@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigitX - Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            digitxbg: "#050505",
+            digitxpanel: "#121212",
+            digitxaccent: "#d68b6f"
+          }
+        }
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body x-data="digitxPage('contact')" x-init="init()" class="min-h-screen bg-[#050505] text-white">
+  <div x-cloak x-show="menuOpen" class="fixed inset-0 z-40 bg-black/70 md:hidden" @click="closeMenu()"></div>
+
+  <div x-cloak x-show="menuOpen" class="menu-panel fixed right-4 top-4 z-50 w-[260px] rounded-[24px] border border-white/10 bg-[#0f0f0f] p-4 md:hidden">
+    <div class="mb-3 flex items-center justify-between">
+      <div class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">Menu</div>
+      <button type="button" class="rounded-full border border-white/10 px-3 py-1 text-xs text-white/80" @click="closeMenu()">Close</button>
+    </div>
+    <div class="space-y-3">
+      <a class="menu-link" :class="isActive('home') ? 'active' : ''" href="index.html">Home</a>
+      <a class="menu-link" :class="isActive('services') ? 'active' : ''" href="services.html">Services</a>
+      <a class="menu-link" :class="isActive('projects') ? 'active' : ''" href="projects.html">Projects</a>
+      <a class="menu-link" :class="isActive('about') ? 'active' : ''" href="about.html">About Us</a>
+      <a class="menu-link" :class="isActive('contact') ? 'active' : ''" href="contact.html">Contact Us</a>
+      <a class="menu-link" :class="isActive('careers') ? 'active' : ''" href="careers.html">Careers</a>
+      <a class="menu-link" :class="isActive('blogs') ? 'active' : ''" href="blogs.html">Blogs</a>
+    </div>
+  </div>
+
+  <main class="w-full">
+    <div class="page-shell">
+      <div class="relative">
+        <img class="page-shot w-full" :src="currentImage" :alt="pageTitle" draggable="false">
+
+        <div class="pointer-events-none absolute inset-0 hidden md:block">
+          <div class="pointer-events-auto relative h-full w-full">
+            <a class="hotspot hotspot-logo" href="index.html" aria-label="DigitX home"></a>
+            <a class="hotspot hotspot-home" href="index.html" aria-label="Home"></a>
+            <a class="hotspot hotspot-services" href="services.html" aria-label="Services"></a>
+            <a class="hotspot hotspot-projects" href="projects.html" aria-label="Projects"></a>
+            <a class="hotspot hotspot-about" href="about.html" aria-label="About Us"></a>
+            <a class="hotspot hotspot-contact" href="contact.html" aria-label="Contact Us"></a>
+            <a class="hotspot hotspot-careers" href="careers.html" aria-label="Careers"></a>
+            <a class="hotspot hotspot-blogs" href="blogs.html" aria-label="Blogs"></a>
+          </div>
+        </div>
+
+        <div class="pointer-events-none absolute inset-0 md:hidden">
+          <div class="pointer-events-auto relative h-full w-full">
+            <a class="hotspot hotspot-mobile-logo" href="index.html" aria-label="DigitX home"></a>
+            <button class="hotspot hotspot-mobile-menu" type="button" @click="openMenu()" aria-label="Open menu"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
